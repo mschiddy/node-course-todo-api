@@ -4,7 +4,7 @@ var Todo = mongoose.model('Todo', {
 	text: {
 		type: String,
 		required: true,
-		minlength: 3,
+		minlength: 1,
 		trim: true
 	},
 	completed: {
@@ -19,14 +19,3 @@ var Todo = mongoose.model('Todo', {
 
 module.exports = {Todo};
 
-/*var newestTodo = new Todo({
-	text: 'Mop floors',
-	completed: true,
-	completedAt: 10
-});
-
-newestTodo.save().then((doc) => {
-	console.log('Saved todo', doc);
-}, (e) => {
-	console.log('Unable to save todo')
-});*/
